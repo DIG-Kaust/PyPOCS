@@ -15,10 +15,10 @@ db.sqlite3
 # Build #
 build
 dist
-package.egg-info/
+pypocs.egg-info/
 
 # setuptools_scm generated  #
-package/version.py 
+pypocs/version.py 
 
 # Development #
 .ipynb_checkpoints/

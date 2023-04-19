@@ -1,24 +1,22 @@
-name: my_env
+name: pypocs
 channels:
-  - pytorch
+  - rapidsai
   - conda-forge
+  - nvidia
   - defaults
 dependencies:
-  - python>=3.8
+  - python=3.9
   - pip
-  - numpy>=1.15.0
-  - scipy>=1.4.0
-  - cudatoolkit=11.3
-  - pytorch==1.10.1=py3.9_cuda11.3_cudnn8.2.0_0
+  - numpy
+  - scipy
+  - cupy
+  - cusignal
+  - pylops
+  - numba
   - matplotlib
   - ipython
-  - jupyter
-  - pylops
-  - torchvision
-  - torchaudio
+  - jupyterlab
   - tqdm
   - pip:
-    - cupy-cuda113
-    - setuptools_scm
-    - torchsummary
-    - segyio
+      - pyproximal
+      - setuptools_scm

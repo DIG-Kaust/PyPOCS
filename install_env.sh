@@ -1,23 +1,25 @@
 #!/bin/bash
 # 
-# Installer for package
+# Installer for pypocs
 # 
-# Run: ./install.sh
+# Run: ./install_env.sh
 # 
-# M. Ravasi, 24/05/2022
+# M. Ravasi, 16/04/2023
 
-echo 'Creating my_env environment'
+echo 'Creating pypocs environment'
 
 # create conda env
 conda env create -f environment.yml
 source ~/miniconda3/etc/profile.d/conda.sh
-conda activate my_env
+conda activate pypocs
 conda env list
 echo 'Created and activated environment:' $(which python)
 
 # check cupy works as expected
-echo 'Checking cupy version and running a command...'
-python -c 'import cupy as cp; print(cp.__version__); import torch; print(torch.__version__);  print(torch.cuda.get_device_name(torch.cuda.current_device())); print(torch.ones(10).to("cuda:0"))'
+echo 'Checking cupy, cusigna  l, and pylops version and running a command...'
+python -c 'import cupy as cp; print(cp.__version__); print(cp.ones(10))'
+python -c 'import cusignal; print(cusignal.__version__)'
+python -c 'import pylops; print(pylops.__version__)'
 
 echo 'Done!'
 
