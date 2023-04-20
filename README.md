@@ -1,4 +1,4 @@
-![LOGO](https://github.com/DIG-Kaust/PyPOCS/blob/main/logo.png)
+![LOGO](https://github.com/DIG-Kaust/PyPOCS/blob/main/asset/logo.png)
 
 Reproducible material for **Why POCS works, and how to make it better - Ravasi M., Luiken N.** submitted to Geophysics.
 
