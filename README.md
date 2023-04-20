@@ -49,8 +49,8 @@ If you find this library useful for your work, please cite the following papers
 
 ```
 @article{ravasi2022,
-	title={Why POCS works, and how to make it better },
-	authors={M., Ravasi, N. Luiken},
+	title={Why POCS works, and how to make it better},
+	authors={M. Ravasi, N. Luiken},
 	journal={ArXiv},
 	year={2022}
 }
