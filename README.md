@@ -1,14 +1,13 @@
-![LOGO](https://github.com/DIG-Kaust/Project_Template/blob/master/logo.png)
+![LOGO](https://github.com/DIG-Kaust/PyPOCS/blob/main/logo.png)
 
-Reproducible material for **XXX -
-Ravasi M., Author M., Author C.** submitted to XXX.
+Reproducible material for **Why POCS works, and how to make it better - Ravasi M., Luiken N.** submitted to Geophysics.
 
 
 ## Project structure
 This repository is organized as follows:
 
-* :open_file_folder: **package**: python library containing routines for ....;
-* :open_file_folder: **data**: folder containing data (or instructions on how to retrieve the data
+* :open_file_folder: **pypocs**: python library containing routines for POCS interpolation with various solvers;
+* :open_file_folder: **data**: folder containing data;
 * :open_file_folder: **notebooks**: set of jupyter notebooks reproducing the experiments in the paper (see below for more details);
 * :open_file_folder: **scripts**: set of python scripts used to run multiple experiments ...
 
@@ -37,13 +36,21 @@ pip install -e .
 
 Remember to always activate the environment by typing:
 ```
-conda activate my_env
-```
-
-Finally, to run tests simply type:
-```
-pytest
+conda activate pypocs
 ```
 
 **Disclaimer:** All experiments have been carried on a Intel(R) Xeon(R) CPU @ 2.10GHz equipped with a single NVIDIA GEForce RTX 3090 GPU. Different environment 
 configurations may be required for different combinations of workstation and GPU.
+
+
+## Citing :newspaper: :trophy:
+If you find this library useful for your work, please cite the following papers
+
+```
+@article{ravasi2022,
+	title={Why POCS works, and how to make it better },
+	authors={M., Ravasi, N. Luiken},
+	journal={ArXiv},
+	year={2022}
+}
+```

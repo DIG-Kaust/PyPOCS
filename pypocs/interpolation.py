@@ -616,7 +616,7 @@ def admm_interpolate(x, mask, samplings, nfft, thresh, niter=10,
 
     erradmm = None
     if xtrue is not None:
-        errpd = np.array(callback.err)
+        erradmm = np.array(callback.err)
 
     if history == -1:
         return xrec, erradmm

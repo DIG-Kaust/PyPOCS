@@ -1,6 +1,22 @@
-# Credits : https://github.com/polimi-ispl/deep_prior_interpolation/blob/master/utils/plotting.py
 import numpy as np
 import matplotlib.pyplot as plt
+
+
+def plotting_style():
+    plt.style.use('default')
+
+    SMALL_SIZE = 10
+    MEDIUM_SIZE = 12
+    BIGGER_SIZE = 18
+
+    plt.rc('font', size=BIGGER_SIZE)  # controls default text sizes
+    plt.rc('axes', titlesize=BIGGER_SIZE)  # fontsize of the axes title
+    plt.rc('axes', labelsize=BIGGER_SIZE)  # fontsize of the x and y labels
+    plt.rc('xtick', labelsize=MEDIUM_SIZE)  # fontsize of the tick labels
+    plt.rc('ytick', labelsize=MEDIUM_SIZE)  # fontsize of the tick labels
+    plt.rc('legend', fontsize=SMALL_SIZE)  # legend fontsize
+    plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
+
 
 def clim(in_content, ratio=95):
     """Clipping based on percentiles
@@ -20,6 +36,8 @@ def explode_volume(volume, t=None, x=None, y=None,
     """Display 3D volume
 
     Display 3D volume in exploding format (three slices)
+
+    Credits : https://github.com/polimi-ispl/deep_prior_interpolation/blob/master/utils/plotting.py
 
     Parameters
     ----------
