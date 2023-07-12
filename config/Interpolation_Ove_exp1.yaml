@@ -1,0 +1,32 @@
+exp:
+  label: ove3d # dataset label
+  number: 1 # experiment number
+  name: Overthrust3D  - POCS interpolation with PD solver # experiment name
+  inputfile: /mnt/datawaha_dig/Data/Overtrust3D/Data/p_full13352.rsf@ # input file with finely sampled data (will be subsampled internally)
+  plotflag: True # plot intermediate results (for debugging purposes)
+
+data:
+  nry: 80 # number of receivers over y axis
+  nrx: 176 # number of receivers over x axis
+  nt: 1126 # number of samples over the t axis
+  dry: 20 # sampling of y axis
+  drx: 20 # sampling of fully sampled x axis
+  dt: 0.004 # sampling of t axis
+
+subsampling:
+  perc_subsampling: 0.6 # subsampling factor
+
+preprocessing:
+  vshift: 4000 # data shifting velocity (in m/s)
+  nwin: [32, 32, 32] # size of windows for patching (y, x, t)
+  nover: [8, 8, 6] # overlap between windows for pacthing (y, x, t)
+  nop: [64, 64, 64] # size of fft operator (y, x, t)
+  nfft: 512  # length of frequency axis (used only for plotting)
+
+interpolation:
+  niter: 140 # number of iterations of primal-dual
+  niteraffine: 2 # number of iterations of affineset
+  thresh: 0.01 # thresholding
+  tau: .99 # step-size of f function in primal-dual
+  mu: .99 # step-size of g function in primal-dual
+  jsrnsave: 20 # interval between iterations to store intermediate solutions for SNR computation
