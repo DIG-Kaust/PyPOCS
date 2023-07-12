@@ -1,26 +1,31 @@
 exp:
   label: ove3d # dataset label
   number: 1 # experiment number
-  name: Overthrust3D  - POCS interpolation with PD solver # experiment name
-  inputfile: /mnt/datawaha_dig/Data/Overtrust3D/Data/p_full13352.rsf@ # input file with finely sampled data (will be subsampled internally)
+  name: Overthrust3D - POCS interpolation with PD solver # experiment name
+  inputfile: ../data/Overthrust/ove_shot13352.npz  # input file with finely sampled data (will be subsampled internally)
+  outputfile: ../data/Overthrust/ovepdrec_shot13352  # output file with interpolated data without npz extension (if None, nothing will be saved)
   plotflag: True # plot intermediate results (for debugging purposes)
 
 data:
-  nry: 80 # number of receivers over y axis
-  nrx: 176 # number of receivers over x axis
-  nt: 1126 # number of samples over the t axis
   dry: 20 # sampling of y axis
   drx: 20 # sampling of fully sampled x axis
   dt: 0.004 # sampling of t axis
 
 subsampling:
+  seed: 5 # seed of random generator to ensure reproducible results
   perc_subsampling: 0.6 # subsampling factor
 
 preprocessing:
+  threshmask: 0.02 # thresholding of direct wave mask
+  itoff: 10 # number of samples used to shift direct wave mask upward
   vshift: 4000 # data shifting velocity (in m/s)
   nwin: [32, 32, 32] # size of windows for patching (y, x, t)
   nover: [8, 8, 6] # overlap between windows for pacthing (y, x, t)
   nop: [64, 64, 64] # size of fft operator (y, x, t)
+  sigmaweighting: 4 # gaussian filter std for weighting
+  epsweighting: 0.001 # stabilization factor for weighting
+  threshweighting: 300 # threshold to apply to weighting
+  scweighting: 20 # scaling to apply to weighting
   nfft: 512  # length of frequency axis (used only for plotting)
 
 interpolation:
