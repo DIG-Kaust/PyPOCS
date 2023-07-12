@@ -9,7 +9,7 @@ This repository is organized as follows:
 * :open_file_folder: **pypocs**: python library containing routines for POCS interpolation with various solvers;
 * :open_file_folder: **data**: folder containing sample data;
 * :open_file_folder: **notebooks**: set of jupyter notebooks reproducing the experiments in the paper (see below for more details);
-* :open_file_folder: **scripts**: set of python scripts used to run multiple experiments ...
+* :open_file_folder: **scripts**: set of python scripts used to facilitate the run of multiple experiments;
 
 ## Notebooks
 The following notebooks are provided:
